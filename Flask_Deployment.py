@@ -20,15 +20,15 @@
 # X_train, X_test, y_train, y_test=train_test_split(X,y,test_size=0.30,random_state=123) 
 
 
-# In[11]:
+# In[2]:
 
 
 #train neural network with the optimal paramters we found
 
-from keras.models import Sequential
-from keras.layers import Dense
-from keras import metrics
-from keras.wrappers.scikit_learn import KerasClassifier
+#from keras.models import Sequential
+# from keras.layers import Dense
+# from keras import metrics
+# from keras.wrappers.scikit_learn import KerasClassifier
 
 from keras.models import load_model
 neural_network_best_model=load_model('neural_network_best_model.h5')
@@ -87,10 +87,10 @@ if __name__=="__main__":
 print(final_features.shape)
 
 
-# In[5]:
+# In[ ]:
 
 
-#get_ipython().system('jupyter nbconvert Flask_Deployment.ipynb --to script')
+#!jupyter nbconvert Flask_Deployment.ipynb --to script
 
 
 # In[ ]:
