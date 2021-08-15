@@ -51,13 +51,12 @@ neural_network_best_model=load_model('neural_network_best_model.h5')
 # neural_network_best_model.fit(X_train,y_train)
 
 
-# In[ ]:
+# In[3]:
 
 
 import numpy as np
 from flask import Flask, request, render_template
 # from joblib import load
-import os
 
 app=Flask(__name__)
 
@@ -87,7 +86,7 @@ if __name__=="__main__":
 print(final_features.shape)
 
 
-# In[ ]:
+# In[4]:
 
 
 #!jupyter nbconvert Flask_Deployment.ipynb --to script
