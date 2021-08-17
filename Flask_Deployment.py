@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[7]:
 
 
 # #import relevant data and split data
@@ -20,7 +20,7 @@
 # X_train, X_test, y_train, y_test=train_test_split(X,y,test_size=0.30,random_state=123) 
 
 
-# In[2]:
+# In[8]:
 
 
 #train neural network with the optimal paramters we found
@@ -29,7 +29,7 @@
 # from keras.layers import Dense
 # from keras import metrics
 # from keras.wrappers.scikit_learn import KerasClassifier
-
+import tensorflow
 from keras.models import load_model
 neural_network_best_model=load_model('neural_network_best_model.h5')
 
@@ -72,7 +72,7 @@ def predict():
     pred_round=np.round(prediction)[0][0]
     
     output=""
-    if pred_round>=1:
+    if pred_round==1:
           output+="persistent"
         
     else:
@@ -83,17 +83,29 @@ def predict():
                               ))
 if __name__=="__main__":
     app.run(port=5000, debug=True, use_reloader=False)
-print(final_features.shape)
 
 
-# In[4]:
+# In[14]:
 
 
 #!jupyter nbconvert Flask_Deployment.ipynb --to script
 
 
-# In[ ]:
+# In[13]:
 
 
+# from platform import python_version
+# print(python_version())
 
+
+# In[6]:
+
+
+#3.9.6 was the other one
+
+
+# In[12]:
+
+
+# tensorflow.__version__
 
