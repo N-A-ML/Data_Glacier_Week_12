@@ -20,7 +20,7 @@
 # X_train, X_test, y_train, y_test=train_test_split(X,y,test_size=0.30,random_state=123) 
 
 
-# In[8]:
+# In[3]:
 
 
 #train neural network with the optimal paramters we found
@@ -51,7 +51,7 @@ neural_network_best_model=load_model('neural_network_best_model.h5')
 # neural_network_best_model.fit(X_train,y_train)
 
 
-# In[3]:
+# In[ ]:
 
 
 import numpy as np
@@ -82,13 +82,14 @@ def predict():
     return(render_template('index.html', prediction_text='This patient is {}'.format(output)                      
                               ))
 if __name__=="__main__":
-    app.run(port=5000, debug=True, use_reloader=False)
+    app.run(#port=5000, 
+        debug=True, use_reloader=False)
 
 
-# In[14]:
+# In[16]:
 
 
-#!jupyter nbconvert Flask_Deployment.ipynb --to script
+get_ipython().system('jupyter nbconvert Flask_Deployment.ipynb --to script')
 
 
 # In[13]:
