@@ -83,13 +83,14 @@ def predict():
                               ))
 if __name__=="__main__":
     app.run(#port=5000, 
-        debug=True, use_reloader=False)
+        #debug=True, use_reloader=False
+    )
 
 
-# In[7]:
+# In[1]:
 
 
-#!jupyter nbconvert Flask_Deployment.ipynb --to script
+get_ipython().system('jupyter nbconvert Flask_Deployment.ipynb --to script')
 
 
 # In[13]:
