@@ -29,7 +29,7 @@
 # from keras.layers import Dense
 # from keras import metrics
 # from keras.wrappers.scikit_learn import KerasClassifier
-import tensorflow
+# import tensorflow
 from keras.models import load_model
 neural_network_best_model=load_model('neural_network_best_model.h5')
 
@@ -51,7 +51,7 @@ neural_network_best_model=load_model('neural_network_best_model.h5')
 # neural_network_best_model.fit(X_train,y_train)
 
 
-# In[ ]:
+# In[4]:
 
 
 import numpy as np
@@ -86,10 +86,10 @@ if __name__=="__main__":
         debug=True, use_reloader=False)
 
 
-# In[16]:
+# In[7]:
 
 
-get_ipython().system('jupyter nbconvert Flask_Deployment.ipynb --to script')
+#!jupyter nbconvert Flask_Deployment.ipynb --to script
 
 
 # In[13]:
