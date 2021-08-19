@@ -1,7 +1,8 @@
-#!/usr/bin/env python
+   
+    #!/usr/bin/env python
 # coding: utf-8
 
-# In[7]:
+# In[1]:
 
 
 # #import relevant data and split data
@@ -20,7 +21,7 @@
 # X_train, X_test, y_train, y_test=train_test_split(X,y,test_size=0.30,random_state=123) 
 
 
-# In[3]:
+# In[9]:
 
 
 #train neural network with the optimal paramters we found
@@ -29,7 +30,8 @@
 # from keras.layers import Dense
 # from keras import metrics
 # from keras.wrappers.scikit_learn import KerasClassifier
-# import tensorflow
+import keras
+import tensorflow as tf
 from keras.models import load_model
 neural_network_best_model=load_model('neural_network_best_model.h5')
 
@@ -51,7 +53,7 @@ neural_network_best_model=load_model('neural_network_best_model.h5')
 # neural_network_best_model.fit(X_train,y_train)
 
 
-# In[4]:
+# In[ ]:
 
 
 import numpy as np
@@ -59,7 +61,7 @@ from flask import Flask, request, render_template
 # from joblib import load
 
 app=Flask(__name__)
-
+#tf.compat.v1.global_variables_initializer()
 
 @app.route('/')
 def home():
@@ -72,7 +74,7 @@ def predict():
     pred_round=np.round(prediction)[0][0]
     
     output=""
-    if pred_round==1:
+    if pred_round>=1:
           output+="persistent"
         
     else:
@@ -83,14 +85,42 @@ def predict():
                               ))
 if __name__=="__main__":
     app.run(#port=5000, 
-        #debug=True, use_reloader=False
+        debug=True, use_reloader=False
     )
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+# In[2]:
 
-# In[1]:
 
-
-get_ipython().system('jupyter nbconvert Flask_Deployment.ipynb --to script')
+#!jupyter nbconvert Flask_Deployment.ipynb --to script
 
 
 # In[13]:
